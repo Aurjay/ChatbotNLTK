@@ -7,12 +7,12 @@ nltk.download('punkt')
 nltk.download('wordnet')
 
 from keras.models import load_model
-model = load_model('D:/Chatbottkinter/Simple-Python-Chatbot-master/Simple-Python-Chatbot-master/chatbot_model.h5')
+model = load_model('D:/Chatbottkinter/chatbot_model.h5')
 import json
 import random
-intents = json.loads(open('D:/Chatbottkinter/Simple-Python-Chatbot-master/Simple-Python-Chatbot-master/intents.json').read())
-words = pickle.load(open('D:/Chatbottkinter/Simple-Python-Chatbot-master/Simple-Python-Chatbot-master/words.pkl','rb'))
-classes = pickle.load(open('D:/Chatbottkinter/Simple-Python-Chatbot-master/Simple-Python-Chatbot-master/classes.pkl','rb'))
+intents = json.loads(open('D:/Chatbottkinter/intents.json').read())
+words = pickle.load(open('D:/Chatbottkinter/words.pkl','rb'))
+classes = pickle.load(open('D:/Chatbottkinter/classes.pkl','rb'))
 
 
 def clean_up_sentence(sentence):
